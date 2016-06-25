@@ -11,7 +11,7 @@ events       = require 'events'
 fs           = require 'fs'
 util         = require 'util'
 path         = require 'path'
-coffeeScript = require 'coffee-script'
+coffeeScript = require 'iced-coffee-script'
 _            = require 'lodash'
 
 NodeWrapper                     = require './NodeWrapper'

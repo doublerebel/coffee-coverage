@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "argparse": "^1.0.2",
-    "coffee-script": ">=1.6.2",
+    "iced-coffee-script": ">=1.6.2",
     "lodash": "^4.14.0",
     "minimatch": "^3.0.2",
     "pkginfo": ">=0.2.3"
@@ -60,7 +60,7 @@
     "prepublish": "npm run build && mocha",
     "test": "npm run build && mocha && istanbul report",
     "coverage-report": "istanbul report text-summary lcov",
-    "build": "coffee -c -o lib src",
+    "build": "./node_modules/.bin/iced -c -o lib src",
     "clean": "rm -rf lib coverage",
     "distclean": "npm run clean && rm -rf node_modules"
   },

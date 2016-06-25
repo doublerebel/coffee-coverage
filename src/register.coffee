@@ -114,6 +114,9 @@ module.exports = (options={}) ->
     replaceHandler ".coffee"
     replaceHandler ".litcoffee"
     replaceHandler ".coffee.md"
+    replaceHandler ".iced"
+    replaceHandler ".liticed"
+    replaceHandler ".iced.md"
 
     # legacy option for `streamlinejs` < 1.x.
     # NOTE: deprecated. Use `options.postProcessors` instead.
@@ -145,7 +148,7 @@ module.exports = (options={}) ->
             {ext, fn} = processorOpts
             if !(_.isString(ext) and _.isFunction(fn))
                 return
-            else if "._coffee" is ext and options.streamlinejs
+            else if ("._coffee" is ext) or ("._iced" is ext) and options.streamlinejs
                 return
 
             originalHandler = require.extensions[ext]

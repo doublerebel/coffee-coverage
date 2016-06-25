@@ -1,5 +1,5 @@
 assert = require 'assert'
-coffeeScript = require 'coffee-script'
+coffeeScript = require 'iced-coffee-script'
 _ = require 'lodash'
 
 # Wraps a `node` returned from coffee-script's `nodes()` method.
