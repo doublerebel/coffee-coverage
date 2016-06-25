@@ -1,9 +1,12 @@
 {
-  "name": "coffee-coverage",
-  "description": "Istanbul and JSCoverage-style instrumentation for CoffeeScript files.",
+  "name": "iced-coffee-coverage",
+  "description": "Istanbul and JSCoverage-style instrumentation for Iced CoffeeScript files.",
   "keywords": [
     "javascript",
     "coffeescript",
+    "iced",
+    "iced-coffee-script",
+    "icedcoffeescript",
     "coverage",
     "code coverage",
     "test",
@@ -22,13 +25,14 @@
     "David Dahl (https://github.com/effata)",
     "David Kirstein (https://github.com/frozenice-)",
     "Dmitry Petrov (https://github.com/can3p)",
-    "Devon Govett (https://github.com/devongovett)"
+    "Devon Govett (https://github.com/devongovett)",
+    "Charles Phillips (https://github.com/doublerebel)"
   ],
   "license": "MIT",
   "main": "./lib/index",
   "repository": {
     "type": "git",
-    "url": "https://github.com/benbria/coffee-coverage.git"
+    "url": "https://github.com/doublerebel/iced-coffee-coverage.git"
   },
   "bin": {
     "coffeeCoverage": "./bin/coffeecoverage"
