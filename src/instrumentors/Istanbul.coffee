@@ -60,14 +60,15 @@ NodeWrapper = require '../NodeWrapper'
 {compareLocations, fileToLines, minLocation} = require '../utils/codeUtils'
 
 nodeToLocation = (node) ->
+    locationData = node.locationData or node.parent.locationData
     # Istanbul uses 1-based lines, but 0-based columns
     answer =
         start:
-            line:   node.locationData.first_line + 1
-            column: node.locationData.first_column
+            line:   locationData.first_line + 1
+            column: locationData.first_column
         end:
-            line:   node.locationData.last_line + 1
-            column: node.locationData.last_column
+            line:   locationData.last_line + 1
+            column: locationData.last_column
     if node.coffeeCoverage?.skip or node.isMarked?('skip')
         answer.skip = true
     return answer

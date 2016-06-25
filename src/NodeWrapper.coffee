@@ -149,6 +149,8 @@ module.exports = class NodeWrapper
                 @node[childName].unshift compile(csSource, @node)
 
         else if child?.constructor?.name is 'Block'
+            unless child.locationData
+                child.locationData = @node.locationData
             child.expressions.unshift compile(csSource, child)
 
         else if !child
