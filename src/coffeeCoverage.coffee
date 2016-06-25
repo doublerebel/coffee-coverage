@@ -334,6 +334,17 @@ exports._runInstrumentor = (instrumentor, fileName, source, options={}) ->
         # Call block-specific visitor function.
         visitor["visit#{nodeWrapper.type}"]?(nodeWrapper)
 
+        if nodeWrapper.type is "Await"
+            nodeWrapper.locationData.first_line--
+            nodeWrapper.locationData.last_line--
+
+        nodeWrapper.forEachChildOfType "icedContinuationBlock", (child) ->
+            child.locationData = nodeWrapper.locationData
+            child.locationData.first_line++
+            child.locationData.last_line++
+            child.node.locationData = child.locationData
+            runVisitor(visitor, child)
+
         if nodeWrapper.isSwitchCases then for __, i in nodeWrapper.node
             nodeWrapper.forEachChildOfType i, (child) ->
                 runVisitor(visitor, child)
