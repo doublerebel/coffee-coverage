@@ -1,6 +1,6 @@
-Istanbul and JSCoverage-style instrumentation for CoffeeScript files.
+Istanbul and JSCoverage-style instrumentation for Iced CoffeeScript files.
 
-Benbria CoffeeCoverage
+Benbria+Doublerebel IcedCoffeeCoverage
 ======================
 
 [![Build Status](https://travis-ci.org/benbria/coffee-coverage.svg?branch=master)](https://travis-ci.org/benbria/coffee-coverage)
@@ -8,7 +8,7 @@ Benbria CoffeeCoverage
 [![Dependency Status](https://david-dm.org/benbria/coffee-coverage.svg)](https://david-dm.org/benbria/coffee-coverage)
 [![devDependency Status](https://david-dm.org/benbria/coffee-coverage/dev-status.svg)](https://david-dm.org/benbria/coffee-coverage#info=devDependencies)
 
-Instruments CoffeeScript files for code coverage.  Compiles .coffee files to .js files, and adds JSCoverage or Istanbul style instrumentation for the original coffee script source.
+Instruments Iced CoffeeScript files for code coverage.  Compiles (.iced|.coffee) files to .js files, and adds JSCoverage or Istanbul style instrumentation for the original iced coffee script source.
 
 [![NPM](https://nodei.co/npm/coffee-coverage.png?downloads=true&downloadRank=true&stars=true)](https://npmjs.org/package/coffee-coverage)
 
@@ -26,14 +26,14 @@ Features
 Quick Start
 -----------
 
-Assuming you have a folder named "test" full of mocha tests, which directly loads your .coffee
+Assuming you have a folder named "test" full of mocha tests, which directly loads your (.iced|.coffee)
 files, then from your project's folder, run:
 
 ```bash
 
-$ npm install --save-dev coffee-coverage
+$ npm install --save-dev iced-coffee-coverage
 $ npm install --save-dev istanbul
-$ mocha --recursive --compilers coffee:coffee-script/register --require coffee-coverage/register-istanbul test
+$ mocha --recursive --compilers coffee:iced-coffee-script/register --require iced-coffee-coverage/register-istanbul test
 
 $ ./node_modules/.bin/istanbul report
 ```
@@ -59,7 +59,7 @@ using coffee-coverage, so we can document it here.
 What it Does
 ------------
 
-Benbria CoffeeCoverage is a tool for determining the coverage of your unit tests.  It does this
-by instrumenting .coffee files to see how often each line, branch, or function is executed.
-CoffeeCoverage is capable of producing both [Istanbul](./docs/HOWTO-istanbul.md) and
+Benbria+Doublerebel Iced CoffeeCoverage is a tool for determining the coverage of your unit tests.  It does this
+by instrumenting (.iced|.coffee) files to see how often each line, branch, or function is executed.
+Iced CoffeeCoverage is capable of producing both [Istanbul](./docs/HOWTO-istanbul.md) and
 [JSCoverage](./docs/HOWTO-jscoverage.md) style instrumentation.
