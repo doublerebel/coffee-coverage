@@ -339,7 +339,7 @@ exports._runInstrumentor = (instrumentor, fileName, source, options={}) ->
             nodeWrapper.locationData.last_line--
 
         nodeWrapper.forEachChildOfType "icedContinuationBlock", (child) ->
-            child.locationData = nodeWrapper.locationData
+            child.locationData = Object.create nodeWrapper.locationData
             child.locationData.first_line++
             child.locationData.last_line++
             child.node.locationData = child.locationData
