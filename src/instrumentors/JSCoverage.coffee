@@ -114,7 +114,11 @@ module.exports = class JSCoverage
         # Don't instrument skipped lines.
         return if node.isMarked('skip') or node.isMarked('noCoverage')
 
-        line = node.locationData.first_line + 1
+        locationData = node.locationData or node.parent.locationData
+        if node.type is "IcedTailCall" and not locationData
+            locationData = node.parent.parent.locationData
+        locationData = Object.create locationData
+        line = locationData.first_line + 1
 
         if line in @instrumentedLines
             # Never instrument the same line twice.  This can happen in a situation like:
