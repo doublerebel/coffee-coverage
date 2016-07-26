@@ -3,14 +3,14 @@ Istanbul and JSCoverage-style instrumentation for Iced CoffeeScript files.
 Benbria+Doublerebel IcedCoffeeCoverage
 ======================
 
-[![Build Status](https://travis-ci.org/benbria/coffee-coverage.svg?branch=master)](https://travis-ci.org/benbria/coffee-coverage)
-[![Coverage Status](https://coveralls.io/repos/benbria/coffee-coverage/badge.svg?branch=master)](https://coveralls.io/r/benbria/coffee-coverage?branch=master)
-[![Dependency Status](https://david-dm.org/benbria/coffee-coverage.svg)](https://david-dm.org/benbria/coffee-coverage)
-[![devDependency Status](https://david-dm.org/benbria/coffee-coverage/dev-status.svg)](https://david-dm.org/benbria/coffee-coverage#info=devDependencies)
+[![Build Status](https://travis-ci.org/doublerebel/iced-coffee-coverage.svg?branch=master)](https://travis-ci.org/doublerebel/iced-coffee-coverage)
+[![Coverage Status](https://coveralls.io/repos/doublerebel/iced-coffee-coverage/badge.svg?branch=master)](https://coveralls.io/r/doublerebel/iced-coffee-coverage?branch=master)
+[![Dependency Status](https://david-dm.org/doublerebel/iced-coffee-coverage.svg)](https://david-dm.org/doublerebel/iced-coffee-coverage)
+[![devDependency Status](https://david-dm.org/doublerebel/iced-coffee-coverage/dev-status.svg)](https://david-dm.org/doublerebel/iced-coffee-coverage#info=devDependencies)
 
 Instruments Iced CoffeeScript files for code coverage.  Compiles (.iced|.coffee) files to .js files, and adds JSCoverage or Istanbul style instrumentation for the original iced coffee script source.
 
-[![NPM](https://nodei.co/npm/coffee-coverage.png?downloads=true&downloadRank=true&stars=true)](https://npmjs.org/package/coffee-coverage)
+[![NPM](https://nodei.co/npm/iced-coffee-coverage.png?downloads=true&downloadRank=true&stars=true)](https://npmjs.org/package/iced-coffee-coverage)
 
 Features
 --------
@@ -53,8 +53,8 @@ Tutorials:
 * [Ignoring code with Pragmas](./docs/pragmas.md)
 
 Have coffee-coverage working in a setup not described above?
-[Raise an issue](https://github.com/benbria/coffee-coverage/issues/new) and let us know how you're
-using coffee-coverage, so we can document it here.
+[Raise an issue](https://github.com/doublerebel/iced-coffee-coverage/issues/new) and let us know how you're
+using iced-coffee-coverage, so we can document it here.
 
 What it Does
 ------------
