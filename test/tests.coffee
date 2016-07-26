@@ -2,6 +2,7 @@ path        = require 'path'
 assert      = require 'assert'
 {expect}    = require 'chai'
 sinon       = require 'sinon'
+errify      = require 'errify'
 
 pn = (pth) -> pth.split('/').join(path.sep)
 
@@ -10,7 +11,7 @@ coffeeCoverage = require("../src/index")
 dummyJsFile = path.resolve __dirname, "../testFixtures/testWithConfig/dummy.js"
 testDir = path.resolve __dirname, "../testFixtures/testWithConfig"
 
-extensions = ['.coffee', '.litcoffee', '.coffee.md', '._coffee']
+extensions = ['.coffee', '.litcoffee', '.coffee.md', '._coffee', '.iced', '.liticed', '.iced.md', '._iced']
 loadedModules = [
     '../testFixtures/testWithExcludes/a/foo.coffee',
     '../testFixtures/testWithExcludes/b/bar.coffee'
@@ -204,3 +205,30 @@ describe "Coverage tests", ->
 
         sinon.assert.callCount(postProcessors[0].fn, 1)
         expect(bar.baz()).to.eq 5
+
+    it "should have full coverage of iced-coffee-script's await/defer and errify/esc patterns", (done) ->
+        ideally  = errify done
+        filename = "await-defer-errify.iced"
+        fixture  = path.resolve __dirname, '../testFixtures/iced'
+
+        coffeeCoverage.register(
+            path: "relative"
+            basePath: fixture
+            coverageVar: COVERAGE_VAR
+            log: log
+        )
+
+        icedTest = require path.join fixture, filename
+        coverage = global[COVERAGE_VAR][filename]
+        expect(coverage).to.exist
+
+        await icedTest null, ideally defer result
+        expect(result).to.be.true
+        expect(coverage[13]).to.equal 0
+        expect(line).to.be.above 0 for line, i in coverage when line? and i isnt 13
+
+        await icedTest true, ideally defer result
+        expect(result).to.be.true
+        expect(line).to.be.above 0 for line, i in coverage when line?
+        done()
+
