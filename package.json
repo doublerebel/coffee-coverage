@@ -58,7 +58,6 @@
     "streamline": "0.12.1"
   },
   "scripts": {
-    "prepublish": "npm run build && mocha",
     "test": "npm run build && mocha && istanbul report",
     "coverage-report": "istanbul report text-summary lcov",
     "build": "./node_modules/.bin/iced -c -o lib src",
