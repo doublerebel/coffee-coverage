@@ -35,6 +35,7 @@ factoryDefaults =
     exclude: []
     recursive: true
     bare: false
+    runtime: 'node'
     instrumentor: 'jscoverage'
 
 exports.getInstrumentorClass = getInstrumentorClass = (instrumentorName) ->
@@ -306,6 +307,7 @@ exports._runInstrumentor = (instrumentor, fileName, source, options={}) ->
     try
         options.log?.debug? "Instrumenting #{fileName}"
         coffeeOptions = {
+            runtime: options.runtime ? "node"
             bare: options.bare ? false
             literate: /\.(litcoffee|coffee\.md|liticed|iced\.md)$/.test(fileName)
         }
