@@ -307,7 +307,7 @@ exports._runInstrumentor = (instrumentor, fileName, source, options={}) ->
         options.log?.debug? "Instrumenting #{fileName}"
         coffeeOptions = {
             bare: options.bare ? false
-            literate: /\.(litcoffee|coffee\.md)$/.test(fileName)
+            literate: /\.(litcoffee|coffee\.md|liticed|iced\.md)$/.test(fileName)
         }
 
         tokens = coffeeScript.tokens source, coffeeOptions
