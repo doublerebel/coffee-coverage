@@ -54,7 +54,7 @@
     "istanbul": "^0.4.4",
     "mocha": "^2.1.0",
     "sinon": "^1.14.1",
-    "benchmark": "^2.0.0",
+    "benchmark": "^2.1.2",
     "streamline": "0.12.1"
   },
   "scripts": {
