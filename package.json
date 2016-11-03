@@ -52,7 +52,7 @@
     "coveralls": "^2.11.2",
     "errify": "^1.0.0",
     "istanbul": "^0.4.4",
-    "mocha": "^2.1.0",
+    "mocha": "^3.1.2",
     "sinon": "^1.14.1",
     "benchmark": "^2.0.0",
     "streamline": "0.12.1"
