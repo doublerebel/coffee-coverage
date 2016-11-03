@@ -41,7 +41,7 @@
     "lib": "./lib"
   },
   "dependencies": {
-    "argparse": "^1.0.2",
+    "argparse": "^1.0.9",
     "iced-coffee-script": ">=1.6.2",
     "lodash": "^4.14.0",
     "minimatch": "^3.0.2",
