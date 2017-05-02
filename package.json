@@ -53,7 +53,7 @@
     "errify": "^1.0.0",
     "istanbul": "^0.4.4",
     "mocha": "^3.1.2",
-    "sinon": "^1.14.1",
+    "sinon": "^2.2.0",
     "benchmark": "^2.0.0",
     "streamline": "2.0.13"
   },
