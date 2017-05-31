@@ -48,7 +48,7 @@
     "pkginfo": ">=0.2.3"
   },
   "devDependencies": {
-    "chai": "^3.0.0",
+    "chai": "^4.0.1",
     "coveralls": "^2.11.2",
     "errify": "^1.0.0",
     "istanbul": "^0.4.4",
